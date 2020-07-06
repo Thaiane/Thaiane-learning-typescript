@@ -1,0 +1,22 @@
+{
+  "name": "learning-typescript",
+  "version": "1.0.0",
+  "description": "[![Twitter: ThaiiBraga](https://img.shields.io/twitter/follow/ThaiiBraga.svg?style=social)](https://twitter.com/ThaiiBraga)",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thaiane/Thaiane-learning-typescript.git"
+  },
+  "author": "Thaiane Braga",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Thaiane/Thaiane-learning-typescript/issues"
+  },
+  "homepage": "https://github.com/Thaiane/Thaiane-learning-typescript#readme",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
+}
