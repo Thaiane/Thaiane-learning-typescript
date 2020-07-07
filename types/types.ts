@@ -75,13 +75,35 @@ function pontoRegistrado(hora:number): string {
     return  (hora <= 8) ? 'ponto normal' : 'forado horário'
 }
 
-let funcionario: {
+type Funcionario = {
     supervisores: string[],
     ponto: (hora: number) => string
-} = {
+}
+
+let func: Funcionario = {
     supervisores: ['Daiane', 'Laiane', 'Raiane'],
     ponto: pontoRegistrado
 }
 
-console.log(funcionario)
-console.log(funcionario.ponto(8))
+console.log(func)
+console.log(func.ponto(8))
+
+// Union types
+
+let nota: number | string = 10
+
+//Never
+function falha(msg: string): never {
+    throw new Error(msg)
+}
+
+const produto = {
+    nome: null,
+    validarProduto() {
+        if (!this.nome) {
+            falha('Precisa ter nome')
+        }
+    }
+}
+
+console.log(produto.validarProduto())

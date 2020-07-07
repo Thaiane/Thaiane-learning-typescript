@@ -60,9 +60,24 @@ console.log(usuario);
 function pontoRegistrado(hora) {
     return (hora <= 8) ? 'ponto normal' : 'forado horário';
 }
-var funcionario = {
+var func = {
     supervisores: ['Daiane', 'Laiane', 'Raiane'],
     ponto: pontoRegistrado
 };
-console.log(funcionario);
-console.log(funcionario.ponto(8));
+console.log(func);
+console.log(func.ponto(8));
+// Union types
+var nota = 10;
+//Never
+function falha(msg) {
+    throw new Error(msg);
+}
+var produto = {
+    nome: null,
+    validarProduto: function () {
+        if (!this.nome) {
+            falha('Precisa ter nome');
+        }
+    }
+};
+console.log(produto.validarProduto());
