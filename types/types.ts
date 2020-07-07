@@ -45,3 +45,43 @@ let carro: any = 'fusca'
 console.log(carro)
 carro = { modelo: 'fusca', ano: 92 }
 console.log(carro)
+
+//Funções
+
+function meunome(): string {
+    return 'Thai'
+}
+console.log(meunome())
+
+function calc(num1: number, num2: number): number {
+    return num1 * num2
+}
+console.log(calc(2,4))
+
+//Tipar como função
+let calculo: (numero: number, numero2: number) => number
+calculo = calc
+console.log(typeof calculo)
+
+// Objetos
+let usuario: {nome: string, idade: number} = {
+    nome: 'Thai',
+    idade: 27
+}
+console.log(usuario)
+
+// Desafio
+function pontoRegistrado(hora:number): string {
+    return  (hora <= 8) ? 'ponto normal' : 'forado horário'
+}
+
+let funcionario: {
+    supervisores: string[],
+    ponto: (hora: number) => string
+} = {
+    supervisores: ['Daiane', 'Laiane', 'Raiane'],
+    ponto: pontoRegistrado
+}
+
+console.log(funcionario)
+console.log(funcionario.ponto(8))

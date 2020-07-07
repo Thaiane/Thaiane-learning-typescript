@@ -37,3 +37,32 @@ var carro = 'fusca';
 console.log(carro);
 carro = { modelo: 'fusca', ano: 92 };
 console.log(carro);
+//Funções
+function meunome() {
+    return 'Thai';
+}
+console.log(meunome());
+function calc(num1, num2) {
+    return num1 * num2;
+}
+console.log(calc(2, 4));
+//Tipar como função
+var calculo;
+calculo = calc;
+console.log(typeof calculo);
+// Objetos
+var usuario = {
+    nome: 'Thai',
+    idade: 27
+};
+console.log(usuario);
+// Desafio
+function pontoRegistrado(hora) {
+    return (hora <= 8) ? 'ponto normal' : 'forado horário';
+}
+var funcionario = {
+    supervisores: ['Daiane', 'Laiane', 'Raiane'],
+    ponto: pontoRegistrado
+};
+console.log(funcionario);
+console.log(funcionario.ponto(8));
