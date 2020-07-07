@@ -106,4 +106,33 @@ const produto = {
     }
 }
 
-console.log(produto.validarProduto())
+// console.log(produto.validarProduto())
+
+// Exemplo de transformação de código JS para TS
+type ContaBancaria = {
+    saldo: number,
+    depositar: (valor: number) => void
+}
+
+type Correntista = {
+    nome: string,
+    contaBancaria: ContaBancaria,
+    contatos: string[]
+}
+
+let conta: ContaBancaria = {
+    saldo: 3456,
+    depositar(valor:number): void {
+        this.saldo += valor
+    }
+}
+
+let correntista: Correntista = {
+    nome: 'Ana Silva',
+    contaBancaria: conta,
+    contatos: ['34567890', '98765432']
+}
+
+correntista.contaBancaria.depositar(3000)
+console.log(correntista)
+

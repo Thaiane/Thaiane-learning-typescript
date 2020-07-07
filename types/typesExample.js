@@ -80,4 +80,16 @@ var produto = {
         }
     }
 };
-console.log(produto.validarProduto());
+var conta = {
+    saldo: 3456,
+    depositar: function (valor) {
+        this.saldo += valor;
+    }
+};
+var correntista = {
+    nome: 'Ana Silva',
+    contaBancaria: conta,
+    contatos: ['34567890', '98765432']
+};
+correntista.contaBancaria.depositar(3000);
+console.log(correntista);
