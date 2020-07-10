@@ -3,26 +3,26 @@
 Isso se a declaração da variável já for atribuído um valor.
 Entretanto, i ideal é ter a tipagem explícita, ou seja, declarada no código após a variável `: tipo` */
 //string
-var nome = 'Thai';
+let nome = 'Thai';
 console.log(nome);
 // nome = 1
 //number
-var irmaos = 2;
+let irmaos = 2;
 console.log(irmaos);
 // irmaos = 'Kamila e Felipe'
 //bolean
-var possuiHabilidades = true;
+let possuiHabilidades = true;
 console.log(possuiHabilidades);
 // possuiHabilidades = 1
 //Declaração sem atribuição
-var minhaIdade;
+let minhaIdade;
 minhaIdade = 27;
 console.log(minhaIdade);
 //array
-var hobbies = ['violão', 4];
+let hobbies = ['violão', 4];
 console.log(hobbies);
 //Tuplas: define quantidade e tipo fixo (estrutura typescript)
-var endereco = ['Av. Valparaiso', 1010];
+let endereco = ['Av. Valparaiso', 1010];
 console.log(endereco);
 //enum (estrutura do typescript)
 var Cor;
@@ -33,7 +33,7 @@ var Cor;
 })(Cor || (Cor = {}));
 console.log(Cor.Amarelo);
 //any: permite qualquer valor, tipagem fraca e dinâmica. Usado bastante na graduação de JS para TS
-var carro = 'fusca';
+let carro = 'fusca';
 console.log(carro);
 carro = { modelo: 'fusca', ano: 92 };
 console.log(carro);
@@ -47,11 +47,11 @@ function calc(num1, num2) {
 }
 console.log(calc(2, 4));
 //Tipar como função
-var calculo;
+let calculo;
 calculo = calc;
 console.log(typeof calculo);
 // Objetos
-var usuario = {
+let usuario = {
     nome: 'Thai',
     idade: 27
 };
@@ -60,33 +60,33 @@ console.log(usuario);
 function pontoRegistrado(hora) {
     return (hora <= 8) ? 'ponto normal' : 'forado horário';
 }
-var func = {
+let func = {
     supervisores: ['Daiane', 'Laiane', 'Raiane'],
     ponto: pontoRegistrado
 };
 console.log(func);
 console.log(func.ponto(8));
 // Union types
-var nota = 10;
+let nota = 10;
 //Never
 function falha(msg) {
     throw new Error(msg);
 }
-var produto = {
+const produto = {
     nome: null,
-    validarProduto: function () {
+    validarProduto() {
         if (!this.nome) {
             falha('Precisa ter nome');
         }
     }
 };
-var conta = {
+let conta = {
     saldo: 3456,
-    depositar: function (valor) {
+    depositar(valor) {
         this.saldo += valor;
     }
 };
-var correntista = {
+let correntista = {
     nome: 'Ana Silva',
     contaBancaria: conta,
     contatos: ['34567890', '98765432']

@@ -1,7 +1,7 @@
 # Welcome to Learning Typescript 👋
 [![Twitter: ThaiiBraga](https://img.shields.io/twitter/follow/ThaiiBraga.svg?style=social)](https://twitter.com/ThaiiBraga)
 
-> Repository containing files used for studying typescript
+> Repository containing files used for studying typescript. It is also used during the # 100DaysOfCode challenge.
 
 ## Author
 
