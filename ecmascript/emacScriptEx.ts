@@ -16,7 +16,7 @@ falarCom('Thai')
 this
 
 function normalComThis() {
-    console.log(this)
+    //console.log(this)
 }
 normalComThis()
 
@@ -26,7 +26,9 @@ normalComThisEspecial()
 
 // this???
 console.log(this)
-const arrowComThis = () => console.log(this)
+const arrowComThis = () => {
+    //console.log(this)
+}
 arrowComThis()
 
 const arrowComThisEspecial = arrowComThis

@@ -12,7 +12,7 @@ const falarCom = (pessoa) => console.log('Ola ' + pessoa);
 falarCom('Thai');
 this;
 function normalComThis() {
-    console.log(this);
+    //console.log(this)
 }
 normalComThis();
 const normalComThisEspecial = normalComThis
@@ -20,7 +20,9 @@ const normalComThisEspecial = normalComThis
 normalComThisEspecial();
 // this???
 console.log(this);
-const arrowComThis = () => console.log(this);
+const arrowComThis = () => {
+    //console.log(this)
+};
 arrowComThis();
 const arrowComThisEspecial = arrowComThis
     .bind({ nome: 'Ana' });
