@@ -33,3 +33,4 @@ console.log(func.ponto(8))
 
 ## Anotações Gerais
 - Bem interessante a biblioteca de gerar README: [readme-md-generator](https://github.com/kefranabg/readme-md-generator)
+- Uma API do Star Wars que proporciona um ambiente de estudos [Star Wars API](https://swapi.dev/)

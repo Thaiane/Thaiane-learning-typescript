@@ -27,3 +27,10 @@ console.log(...notas)
 const cientista = {primeiroNome: "Will", experiencia: 12}
 const {primeiroNome, experiencia} = cientista
 console.log(primeiroNome, experiencia)
+
+// Exercicio 7: promise usando playground
+fetch('https://swapi.dev/api/people/1')
+    .then(res => console.log(res))
+    .catch(rej => console.log(`Errrooouuuu ${rej}`))
+
+//TODO: O Exercicio 7 está com erro de CORS. Rever novamente mais tarde.
