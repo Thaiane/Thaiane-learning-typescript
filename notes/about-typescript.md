@@ -49,6 +49,12 @@ namespace Area {
 console.log('Fora da area',PI); // res: Na area 3.14
 ```
 
+| Namespace      | Módulos      |
+| :------------- | :----------: |
+|  Organização feita por objetos | Organização feita com módulos reais |
+| Pode ser separado em vérios arquivos | App pode ter múltiplos módulos |
+| Não há necessidade de loaders| Precisa de um loadre|
+| Gerenciar dependências torna-se <br/>compliado com aplicações grandes| Declaração explícita de dependências |
 
 ## Anotações Gerais
 - Bem interessante a biblioteca de gerar README: [readme-md-generator](https://github.com/kefranabg/readme-md-generator)
