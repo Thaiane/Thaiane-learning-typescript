@@ -11,7 +11,23 @@
 <!--    <script src="types/typesExample.js"></script>-->
 <!--    <script src="ecmascript/emacScriptEx.js"></script>-->
 <!--    <script src="class/class.js"></script>-->
-    <!-- <script src="class/desafio.js"></script> -->
-        <script src='namespace/namespace.js'></script>
+<!--    <script src="class/desafio.js"></script> -->
+<!--    <script src='namespace/namespace.js'></script> -->
+    <!-- <script src='modules/modulo.js'></script> -->
+    <!-- Maas para funcionar no browser sem webpack precisamos usar o SystemJs como abaixo -->
+        <script src="node_modules/systemjs/dist/system.js"></script> //
+        <script>
+            SystemJS.config({
+                baseUrl: './modules',
+                packages: {
+                    './modules': {
+                        defaultJSExtension: true
+                    }
+                }
+            })
+
+            System.import('./modules/modulo.js')
+        </script>
+
 </body>
 </html>
