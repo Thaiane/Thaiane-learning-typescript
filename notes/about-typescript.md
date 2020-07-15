@@ -34,6 +34,7 @@ console.log(func.ponto(8))
 #### Namespace
 
 - Namespace é uma propriedade do Typescript e não disponível no javascript.
+- Podemos usar `/// <reference path='areaRetang.ts'/>` para importar namespace de outro arquivo
 - Namespace define uma espaço onde o escopo será fechado. Por exemplo:
 
 ```
