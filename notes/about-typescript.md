@@ -31,6 +31,23 @@ console.log(func.ponto(8))
 
 - Dica de JS. Spread espalha e Rest junta. :)
 
+#### Namespace
+
+- Namespace define uma espaço onde o escopo será fechado. Por exemplo:
+
+```
+const PI = 3.14;
+
+namespace Area {
+  const PI = 3.1417;
+
+  console.log('Na area',PI); // res: Na area 3.1417
+}
+
+console.log('Fora da area',PI); // res: Na area 3.14
+```
+
+
 ## Anotações Gerais
 - Bem interessante a biblioteca de gerar README: [readme-md-generator](https://github.com/kefranabg/readme-md-generator)
 - Uma API do Star Wars que proporciona um ambiente de estudos [Star Wars API](https://swapi.dev/)
