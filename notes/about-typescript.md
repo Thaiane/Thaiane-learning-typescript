@@ -33,6 +33,7 @@ console.log(func.ponto(8))
 
 #### Namespace
 
+- Namespace é uma propriedade do Typescript e não disponível no javascript.
 - Namespace define uma espaço onde o escopo será fechado. Por exemplo:
 
 ```
