@@ -56,6 +56,19 @@ console.log('Fora da area',PI); // res: Na area 3.14
 | Não há necessidade de loaders| Precisa de um loadre|
 | Gerenciar dependências torna-se <br/>compliado com aplicações grandes| Declaração explícita de dependências |
 
+### Interface
+
+Usamos para determinar um conjunto de tipos. Uma classe pode implementar uma interface ou um método pode receber como propriedade uma propriedade com tipo de uma interface.
+
+````
+interface Humano {
+  nome: string, -> obrigatório
+  idade?: number, -> variavel opcional
+  [prop: string]: any -> alguma varíavel com qualquer nome(prop: string ) e que recebe qualquer tipo de atributo (any)
+    saudar(nome: string): void -> Método
+}
+````
+
 ## Anotações Gerais
 - Bem interessante a biblioteca de gerar README: [readme-md-generator](https://github.com/kefranabg/readme-md-generator)
 - Uma API do Star Wars que proporciona um ambiente de estudos [Star Wars API](https://swapi.dev/)

@@ -1,5 +1,8 @@
 interface Humano {
-  nome: string
+  nome: string,
+  idade?: number,
+  [prop: string]: any,
+  saudar(nome: string): void
 }
 
 namespace saudar {
@@ -8,9 +11,13 @@ namespace saudar {
   }
 }
 
-const pessoa = {
+const pessoa: Humano = {
   nome: "Thai",
-  idade: 28
+  idade: 28,
+  altura: 1.6,
+  saudar(nome: string) {
+    console.log("Oii", this.nome)
+  }
 }
 
 saudar.saudar(pessoa)

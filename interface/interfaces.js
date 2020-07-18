@@ -8,6 +8,10 @@ var saudar;
 })(saudar || (saudar = {}));
 const pessoa = {
     nome: "Thai",
-    idade: 28
+    idade: 28,
+    altura: 1.6,
+    saudar(nome) {
+        console.log("Oii", this.nome);
+    }
 };
 saudar.saudar(pessoa);
