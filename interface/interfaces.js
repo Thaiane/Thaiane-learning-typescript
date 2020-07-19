@@ -15,3 +15,19 @@ const pessoa = {
     }
 };
 saudar.saudar(pessoa);
+class RealA {
+    a() { }
+}
+class RealAB {
+    a() { }
+    b() { }
+}
+class RealABC {
+    a() { }
+    b() { }
+    c() { }
+}
+class AbsABD {
+    a() { }
+    b() { }
+}

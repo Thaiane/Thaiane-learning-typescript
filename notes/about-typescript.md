@@ -68,6 +68,32 @@ interface Humano {
     saudar(nome: string): void -> Método
 }
 ````
+### Generics
+
+O tipo generecs fornece a possibilidade de inferir ou explicitar o tipo apenas no momento do seu uso.
+Diferente do tipo `any`, ele consegue validar o tipo após o uso da função.
+
+```typescript
+function echoComGenerics<T>(objeto: T): T {
+    return objeto;
+}
+
+console.log(echoComGenerics<string>('Thai').length); //Podemos deiaxr explicito o tipo T na hora do uso
+console.log(echoComGenerics(28).length) // erro é validado pelo typescript antes da execução
+console.log(echoComGenerics({ nome: 'Thai', idade: 28})) // TS infere o tipo de T conforme o tipo do objeto passado para ele
+````
+
+Podemos utilizar também o constrains para limitar os tipos de T:
+
+```typescript
+function echoComGenerics<T extends number | string>(objeto: T): T {
+    return objeto;
+}
+
+console.log(echoComGenerics<string>('Thai').length); //Podemos deixar explicito o tipo T na hora do uso
+console.log(echoComGenerics(28).length) // erro porque nao tem length em number
+console.log(echoComGenerics({ nome: 'Thai', idade: 28})) // erro porque nao é string ou number
+```
 
 ## Anotações Gerais
 - Bem interessante a biblioteca de gerar README: [readme-md-generator](https://github.com/kefranabg/readme-md-generator)
