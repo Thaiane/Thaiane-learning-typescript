@@ -95,6 +95,10 @@ console.log(echoComGenerics(28).length) // erro porque nao tem length em number
 console.log(echoComGenerics({ nome: 'Thai', idade: 28})) // erro porque nao é string ou number
 ```
 
+### Decorator
+
+Decorators são parecidos com Annotations do java.
+
 ## Anotações Gerais
 - Bem interessante a biblioteca de gerar README: [readme-md-generator](https://github.com/kefranabg/readme-md-generator)
 - Uma API do Star Wars que proporciona um ambiente de estudos [Star Wars API](https://swapi.dev/)
