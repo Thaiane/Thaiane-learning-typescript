@@ -97,7 +97,25 @@ console.log(echoComGenerics({ nome: 'Thai', idade: 28})) // erro porque nao é s
 
 ### Decorator
 
-Decorators são parecidos com Annotations do java.
+Decorators são parecidos com Annotations do java. Pode ser uma forma de chamar uma classe ou um método por notação.
+
+Exemplo:
+
+```
+// @logarClasse
+@logarSe(true)
+class Eletro {
+    constructor() {
+        console.log("Chamou o construtor")
+    }
+}
+
+function logarClasse(construtor: Function) {
+    console.log(construtor)
+}
+
+function logarSe(sera: boolean): any {
+```
 
 ## Anotações Gerais
 - Bem interessante a biblioteca de gerar README: [readme-md-generator](https://github.com/kefranabg/readme-md-generator)
