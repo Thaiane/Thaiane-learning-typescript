@@ -32,12 +32,15 @@ function imprimir<T>(args: T[]) {
 imprimir([1, 2, 3])
 imprimir<number>([1, 2, 3])
 imprimir<string>(['Ana', 'Bia', 'Carlos'])
+
+// Ver a simplificação dessa tipagem 
 imprimir<{ nome: string, idade: number }>([
     { nome: 'Fulano', idade: 22 },
     { nome: 'Cicrano', idade: 23 },
     { nome: 'Beltrano', idade: 24 }
 ])
 
+// Ver a simplificação dessa tipagem 
 // Tipo objeto
 type Aluno = { nome: string, idade: number }
 imprimir<Aluno>([
@@ -45,6 +48,35 @@ imprimir<Aluno>([
     { nome: 'Cicrano', idade: 23 },
     { nome: 'Beltrano', idade: 24 }
 ])
+
+/**
+ * A tipagem pode ser simplificada na forma de: 
+ * 
+ * { [key: string]: any }
+ * 
+ * O que isso quer dizer? 
+ * 
+ * Você está dizendo que você aceita um objeto
+ * que pode conter multiplas keys (por isso o [])
+ * e o o valor da que pode ser qualquer um.
+ * 
+ * Por que fazer assim? 
+ * 
+ * Flexibilidade 
+ * 
+ * Por exemplo: 
+ * 
+ * Numa das suas chamadas você tipou com
+ * { nome: string, idade: number }
+ * 
+ * Isso quer dizer que nessa chamada só serão aceitos
+ * parametros que respeitem esse tipo. 
+ * 
+ */
+imprimir<{ [key: string]: any }>([
+    // Assim o valor das propriedades pode ser qualquer um.     
+    { name: 'Meliodas', age: 'Alguém sabe?' }, 
+]);
 
 // Tipo Genérico
 type Echo = <T>(data: T) => T
